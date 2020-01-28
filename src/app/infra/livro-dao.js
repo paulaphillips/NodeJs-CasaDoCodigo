@@ -72,19 +72,19 @@ class LivroDao {
                 descricao = ?
                 WHERE id = ?
             `,
-            [
-                livro.titulo,
-                livro.preco,
-                livro.descricao,
-                livro.id
-            ],
-            erro => {
-                if (erro) {
-                    return reject('Não foi possível atualizar o livro!');
-                }
+                [
+                    livro.titulo,
+                    livro.preco,
+                    livro.descricao,
+                    livro.id
+                ],
+                erro => {
+                    if (erro) {
+                        return reject('Não foi possível atualizar o livro!');
+                    }
 
-                resolve();
-            });
+                    resolve();
+                });
         });
     }
 
